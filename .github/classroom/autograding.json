@@ -1,0 +1,64 @@
+{
+  "tests": [
+    {
+      "name": "2 puts test",
+      "setup": "mvn compile",
+      "run": "mvn -Dtest=AssignmentTest#test_2_puts test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "3 puts test",
+      "setup": "mvn compile",
+      "run": "mvn -Dtest=AssignmentTest#test_3_puts test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "replace put test",
+      "setup": "mvn compile",
+      "run": "mvn -Dtest=AssignmentTest#test_3_puts_and_a_replace_put test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "remove test",
+      "setup": "mvn compile",
+      "run": "mvn -Dtest=AssignmentTest#test_3_puts_and_1_remove test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "dictionary test",
+      "setup": "mvn compile",
+      "run": "mvn -Dtest=AssignmentTest#test_map_dictionary test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "remove unrhymables test",
+      "setup": "mvn compile",
+      "run": "mvn -Dtest=AssignmentTest#test_removeUnrhymables_OPTIONAL test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    }
+  ]
+}
