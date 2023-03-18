@@ -60,8 +60,66 @@ public class RhymingDict {
 
     // ********** TO DO 2: Store a rhymeGroup (key) and word (value) in the Dictionary (hashtable) **********
     public static void storeRhyme(DictionaryInterface rhymingDict, String line) {
+        String group = getRhymeGroup(line);
+        String word = getWord(line);
+
+        if(rhymingDict.get(group)==null){
+            MySortedLinkedList ll = new MySortedLinkedList();
+            ll.add(word);
+            rhymingDict.put(group,ll);
+        }
+        else{
+            ((MySortedLinkedList)rhymingDict.get(group)).add(word);
+        }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       /* String groups = getRhymeGroup(line);
+        System.out.println(groups);
+        String word = getWord(line);
+        String currGroup;
+        StringTokenizer group = new StringTokenizer(groups);
+
+        while(group.hasMoreTokens()){
+            System.out.println("nexttoken");
+            currGroup=group.nextToken();
+            System.out.println(currGroup);
+
+            MySortedLinkedList entryValue = (MySortedLinkedList) rhymingDict.get(currGroup);
+
+            if(entryValue==null){
+                MySortedLinkedList words = new MySortedLinkedList();
+                words.add(word);
+                /////
+                rhymingDict.put(currGroup,words);
+
+            }
+            else{
+                entryValue.add(word);
+            }
+        }
+
+*/
     }
 
     // Get two random indexes that are not the same
