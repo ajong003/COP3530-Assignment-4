@@ -102,7 +102,7 @@ public class MyHashtable implements DictionaryInterface {
         // 2. If that location in the table is null,
         // that means nothing has been previously stored using a key with this hash code.
         if(table[index]==null) {
-            System.out.println("no bucket");
+
 
 
             // a. Create a new MyLinkedList to be the bucket.
@@ -138,10 +138,10 @@ public class MyHashtable implements DictionaryInterface {
                     // return oldValue.value;
                     MyLinkedList bucket = table[index];
                 for(int i=0;i<bucket.size();i=i+1){
-                    System.out.println("Checking if " + ((Entry)bucket.get(i)).key + " == " + key);
+
 
                     if(((Entry)bucket.get(i)).key.equals(key)){
-                        System.out.println("KEY FOUND");
+
                         Entry oldvalue = new Entry(key,((Entry)bucket.get(i)).value);
                         ((Entry)bucket.get(i)).value= value;
                         return oldvalue.value;
@@ -155,7 +155,7 @@ public class MyHashtable implements DictionaryInterface {
 
             // Increment the size.
         }
-        System.out.println("adding anyways");
+
         table[index].add(0,new Entry(key,value));
         size++;
         return null;
@@ -190,7 +190,7 @@ public class MyHashtable implements DictionaryInterface {
         // 2. If that location in the table is null, then this key has definitely not been used to store a value.
         if(table[index]!=null){
             for (int i = 0; i < table[index].size(); i++) {
-                if (((Entry) table[index].get(i)).key == key) {
+                if (((Entry) table[index].get(i)).key.equals(key) ) {
                     table[index].remove(i);
                     size-=1;
 
@@ -215,14 +215,14 @@ public class MyHashtable implements DictionaryInterface {
     public String[] getKeys(){
         // 1. Create a String[] with a size equal to the number of unique keys in the hashtable
             String[] arr = new String[size];
-        System.out.println("SIZE IS" + size);
+
             int nextindex=0;
         // 2. Iterate through the hashtable array.
             for(MyLinkedList bucket:table){
                 if(bucket!=null){
                     for(int i=0;i<bucket.size();i++){
-                        System.out.println(i);
-                        System.out.println(((Entry)bucket.get(i)).key);
+
+
                         arr[nextindex]=((Entry)bucket.get(i)).key;
                         nextindex++;
                     }

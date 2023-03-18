@@ -69,11 +69,11 @@ public class RhymingDict {
         if(rhymingDict.get(group)==null){
                 MySortedLinkedList ll = new MySortedLinkedList();
                 ll.add(word);
-                System.out.println("Adding key" + group);
+
                 rhymingDict.put(group,ll);
             }
         else{
-                System.out.println("adding key" + group);
+
                 ((MySortedLinkedList)rhymingDict.get(group)).add(word);
             }
         }
@@ -185,6 +185,7 @@ public class RhymingDict {
     // ********** TO DO #3: Remove any of the unrhymables **********
     public static void removeUnrhymables(DictionaryInterface rhymingDict) {
             String[] keys = rhymingDict.getKeys();
+
             for(int i=0;i<keys.length;i++){
                 String key=keys[i];
                 if(((MySortedLinkedList)rhymingDict.get(key)).size()==1){
