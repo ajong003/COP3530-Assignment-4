@@ -172,7 +172,7 @@ public class MyHashtable implements DictionaryInterface {
         if (table[index] != null) {
             for (int i = 0; i < table[index].size(); i++) {
 
-                if (((Entry) table[index].get(i)).key == key) {
+                if (((Entry) table[index].get(i)).key.equals(key)) {
                     return ((Entry) table[index].get(i)).value;
 
                 }

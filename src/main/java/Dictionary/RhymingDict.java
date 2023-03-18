@@ -184,7 +184,13 @@ public class RhymingDict {
 
     // ********** TO DO #3: Remove any of the unrhymables **********
     public static void removeUnrhymables(DictionaryInterface rhymingDict) {
-
+            String[] keys = rhymingDict.getKeys();
+            for(int i=0;i<keys.length;i++){
+                String key=keys[i];
+                if(((MySortedLinkedList)rhymingDict.get(key)).size()==1){
+                    rhymingDict.remove(key);
+                }
+            }
     }
 
     // Once you've implemented your dictionary, you can use the testDictionary function to test
