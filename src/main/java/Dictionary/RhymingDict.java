@@ -60,41 +60,44 @@ public class RhymingDict {
 
     // ********** TO DO 2: Store a rhymeGroup (key) and word (value) in the Dictionary (hashtable) **********
     public static void storeRhyme(DictionaryInterface rhymingDict, String line) {
+
         String group = getRhymeGroup(line);
         String word = getWord(line);
 
+
+
         if(rhymingDict.get(group)==null){
-            MySortedLinkedList ll = new MySortedLinkedList();
-            ll.add(word);
-            rhymingDict.put(group,ll);
-        }
+                MySortedLinkedList ll = new MySortedLinkedList();
+                ll.add(word);
+                System.out.println("Adding key" + group);
+                rhymingDict.put(group,ll);
+            }
         else{
-            ((MySortedLinkedList)rhymingDict.get(group)).add(word);
+                System.out.println("adding key" + group);
+                ((MySortedLinkedList)rhymingDict.get(group)).add(word);
+            }
         }
+        /*
+        String groups = getRhymeGroup(line);
+        String word = getWord(line);
+        StringTokenizer tokenizer = new StringTokenizer(groups);
+        while(tokenizer.hasMoreTokens()){
+            String group = tokenizer.nextToken();
+            if(rhymingDict.get(group)==null){
+                MySortedLinkedList ll = new MySortedLinkedList();
+                ll.add(word);
+                System.out.println("Adding key" + group);
+                rhymingDict.put(group,ll);
+            }
+            else{
+                System.out.println("adding key" + group);
+                ((MySortedLinkedList)rhymingDict.get(group)).add(word);
+            }
+        }*/
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       /* String groups = getRhymeGroup(line);
+        /* String groups = getRhymeGroup(line);
         System.out.println(groups);
         String word = getWord(line);
         String currGroup;
@@ -120,7 +123,7 @@ public class RhymingDict {
         }
 
 */
-    }
+
 
     // Get two random indexes that are not the same
     public static int[] getTwoDifferentRandomIndexes(int length) {

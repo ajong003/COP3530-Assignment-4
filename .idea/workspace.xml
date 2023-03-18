@@ -60,7 +60,7 @@
       <command value="maven test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AssignmentTest">
+  <component name="RunManager" selected="Application.RhymingDict">
     <configuration name="RhymingDict" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Dictionary.RhymingDict" />
       <module name="COP3530-Module-4-Template" />
@@ -115,8 +115,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AssignmentTest" />
         <item itemvalue="Application.RhymingDict" />
+        <item itemvalue="JUnit.AssignmentTest" />
         <item itemvalue="JUnit.AssignmentTest.test_map_dictionary" />
         <item itemvalue="JUnit.AssignmentTest.test_removeUnrhymables_OPTIONAL" />
         <item itemvalue="JUnit.AssignmentTest.test_3_puts_and_1_remove" />

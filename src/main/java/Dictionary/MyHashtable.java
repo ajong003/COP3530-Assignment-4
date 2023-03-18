@@ -102,6 +102,7 @@ public class MyHashtable implements DictionaryInterface {
         // 2. If that location in the table is null,
         // that means nothing has been previously stored using a key with this hash code.
         if(table[index]==null) {
+            System.out.println("no bucket");
 
 
             // a. Create a new MyLinkedList to be the bucket.
@@ -137,8 +138,10 @@ public class MyHashtable implements DictionaryInterface {
                     // return oldValue.value;
                     MyLinkedList bucket = table[index];
                 for(int i=0;i<bucket.size();i=i+1){
+                    System.out.println("Checking if " + ((Entry)bucket.get(i)).key + " == " + key);
 
-                    if(((Entry)bucket.get(i)).key==key){
+                    if(((Entry)bucket.get(i)).key.equals(key)){
+                        System.out.println("KEY FOUND");
                         Entry oldvalue = new Entry(key,((Entry)bucket.get(i)).value);
                         ((Entry)bucket.get(i)).value= value;
                         return oldvalue.value;
@@ -152,6 +155,7 @@ public class MyHashtable implements DictionaryInterface {
 
             // Increment the size.
         }
+        System.out.println("adding anyways");
         table[index].add(0,new Entry(key,value));
         size++;
         return null;
