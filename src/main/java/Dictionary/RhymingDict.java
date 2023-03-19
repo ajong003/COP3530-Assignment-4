@@ -216,8 +216,8 @@ public class RhymingDict {
     public static void main(String[] args) {
 
         // Uncomment this to test that your hashtable is doing what you expect.
-        // MyHashtable testTable = new MyHashtable(100);
-        // testDictionary(testTable);
+        MyHashtable testTable = new MyHashtable(100);
+         testDictionary(testTable);
 
         // Save a seed.
         // Like in Lab01, the seeds allow us generate the same random numbers (the same poems) again

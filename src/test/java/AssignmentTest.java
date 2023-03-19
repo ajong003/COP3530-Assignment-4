@@ -77,7 +77,7 @@ public class AssignmentTest {
         Assertions.assertEquals(3841, keys.length);
         Assertions.assertEquals(4, rhymingDict.biggestBucket());
         // actual expected: <1.4137499332427979>
-        Assertions.assertEquals(0.370, round(rhymingDict.averageBucket(),3));
+        Assertions.assertEquals(0.37, round(rhymingDict.averageBucket(),3));
     }
 
 }

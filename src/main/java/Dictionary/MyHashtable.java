@@ -191,6 +191,7 @@ public class MyHashtable implements DictionaryInterface {
         if(table[index]!=null){
             for (int i = 0; i < table[index].size(); i++) {
                 if (((Entry) table[index].get(i)).key.equals(key) ) {
+
                     table[index].remove(i);
                     size-=1;
 
